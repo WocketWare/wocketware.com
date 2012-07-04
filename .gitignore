@@ -1,4 +1,11 @@
 #################
+## MY STUFF
+#################
+
+# Never want to check in a WordPress config file
+wp-config.php
+
+#################
 ## Eclipse
 #################
 
