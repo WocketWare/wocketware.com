@@ -44,7 +44,7 @@
 			
 				<div id="inner-header" class="wrap clearfix">
 					
-					<h1 id="logo">
+					<h1 id="logo" class="text-center">
 						<a href="<?php echo home_url(); ?>" rel="nofollow">
 							<img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/library/images/wocketware.png" />
 						</a>

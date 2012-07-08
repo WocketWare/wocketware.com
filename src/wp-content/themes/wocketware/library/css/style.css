@@ -528,6 +528,13 @@ TYPOGRAPHY
     	font-style: normal;
 	}
 */
+@font-face {
+  font-family: 'FuturaLTBook';
+  src: url('../fonts/futuralt-book-webfont.eot');
+  src: url('../fonts/futuralt-book-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/futuralt-book-webfont.woff') format('woff'), url('../fonts/futuralt-book-webfont.ttf') format('truetype'), url('../fonts/futuralt-book-webfont.svg#FuturaLTBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /* 
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
@@ -1550,12 +1557,15 @@ you can add resource intensive styles.
   
   }
   .nav li a {
-    width: 120px;
-    height: 16px;
+    width: 140px;
+    height: 32px;
     margin: 0 5px;
+    padding: 6px 0 0 0;
     background: url('../images/navitem.png') no-repeat;
     border-bottom: 0;
     text-align: center;
+    font-family: "FuturaLTBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
     /*
   			you can use hover styles here even though this size
   			has the possibility of being a mobile device.
