@@ -466,12 +466,23 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER SYTLES
 *********************/
+.header .logo {
+  display: block;
+  margin: 0 auto 0;
+  /* bring the header ontop of the navigation, which we lift to the same position */
+
+  position: relative;
+  z-index: 5;
+}
 /*********************
 NAVIGATION STYLES
 *********************/
 .nav {
-  background: #eee;
   border: 0;
+  /* bring the navigation up with the main logo */
+
+  position: relative;
+  top: -100px;
   /* end .menu ul li */
 
   /* highlight current page */
@@ -482,6 +493,8 @@ NAVIGATION STYLES
 .nav li {
   float: left;
   position: relative;
+  /* push the second half of the nav items to the right */
+
   /*
 		plan your menus and drop-downs wisely.
 		*/
@@ -500,6 +513,9 @@ NAVIGATION STYLES
 .nav li a:hover,
 .nav li a:focus {
   background-color: #dedede;
+}
+.nav li:nth-child(n+3) {
+  float: right;
 }
 .nav li ul.sub-menu,
 .nav li ul.children {

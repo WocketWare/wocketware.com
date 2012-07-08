@@ -903,9 +903,11 @@ and moe scalable.
 .nav li a {
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
   padding: 10px 10px;
-  background-color: #eee;
+  background-color: #1e1e1e;
   border-bottom: 1px solid #ccc;
+  color: #dbdbdb;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1509,12 +1511,22 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
+  #logo {
+    text-align: center;
+  }
+  #logo a {
+    position: relative;
+    z-index: 5;
+  }
   /*********************
   NAVIGATION STYLES
   *********************/
   .nav {
-    background: #eee;
     border: 0;
+    /* bring the navigation up with the main logo */
+  
+    position: relative;
+    top: -110px;
     /* end .menu ul li */
   
     /* highlight current page */
@@ -1522,9 +1534,14 @@ you can add resource intensive styles.
     /* end current highlighters */
   
   }
+  .nav ul.top-nav {
+    padding: 0 70px;
+  }
   .nav li {
     float: left;
     position: relative;
+    /* push the second half of the nav items to the right */
+  
     /*
   		plan your menus and drop-downs wisely.
   		*/
@@ -1533,7 +1550,12 @@ you can add resource intensive styles.
   
   }
   .nav li a {
+    width: 120px;
+    height: 16px;
+    margin: 0 5px;
+    background: url('../images/navitem.png') no-repeat;
     border-bottom: 0;
+    text-align: center;
     /*
   			you can use hover styles here even though this size
   			has the possibility of being a mobile device.
@@ -1543,6 +1565,15 @@ you can add resource intensive styles.
   .nav li a:hover,
   .nav li a:focus {
     background-color: #dedede;
+  }
+  .nav li:first-child {
+    margin-left: 0;
+  }
+  .nav li:last-child {
+    margin-right: 0;
+  }
+  .nav li:nth-child(n+3) {
+    float: right;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {

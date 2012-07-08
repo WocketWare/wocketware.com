@@ -108,22 +108,40 @@ HEADER SYTLES
 
 .header {}
 
-	#logo {}
-	
+	#logo {
+		text-align: center;
+
+		a {
+			position: relative;
+			z-index: 5;
+		}
+	}
+
+
 /*********************
 NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee; 
 	border: 0;
 			
+	ul.top-nav { padding: 0 70px; }
+			
+	/* bring the navigation up with the main logo */
+	position: relative;
+	top: -110px;
+
 	li {
 		float: left;
 		position: relative;
 				
 		a {
+			width: 120px;
+			height: 16px;
+			margin: 0 5px;
+			background: url('../images/navitem.png') no-repeat;
 			border-bottom: 0;
+			text-align: center;
 					
 			/*
 			you can use hover styles here even though this size
@@ -135,9 +153,18 @@ NAVIGATION STYLES
 			}
 		}
 				
-		&:first-child {}
-		&:last-child {}
-				
+		&:first-child {
+			margin-left:0;
+		}
+		&:last-child {
+			margin-right:0;
+		}
+
+		/* push the second half of the nav items to the right */
+		&:nth-child(n+3) {
+			float: right;
+		}
+
 		/*
 		plan your menus and drop-downs wisely.
 		*/
