@@ -1557,17 +1557,14 @@ you can add resource intensive styles.
   
   }
   .nav li a {
-    width: 140px;
-    height: 31px;
+    width: 145px;
+    height: 42px;
     margin: 0 5px;
-    padding: 5px 0 0 0;
+    padding: 7px 0 0 0;
     background: url('../images/navitem.png') no-repeat;
     border-bottom: 0;
     text-align: center;
     text-shadow: 0 1px 2px #bbbbbb;
-    -webkit-box-shadow: 0 1px 2px 2px #bbbbbb;
-    -moz-box-shadow: 0 1px 2px 2px #bbbbbb;
-    box-shadow: 0 1px 2px 2px #bbbbbb;
     font-family: "FuturaLTBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4em;
     /*
@@ -1579,6 +1576,7 @@ you can add resource intensive styles.
   .nav li a:hover,
   .nav li a:focus {
     background-color: #dedede;
+    background: url('../images/navitemactive.png') no-repeat;
   }
   .nav li:first-child {
     margin-left: 0;
