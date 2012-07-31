@@ -10,7 +10,39 @@ Template Name: Home Template
 			
 				<div id="inner-content" class="wrap clearfix">
 			
-				    <div id="main" class="eightcol first clearfix" role="main">
+					<div id="slider" class="twelvecol first clearfix">
+
+
+					</div>
+
+
+					<div id="callouts" class="clearfix">
+						<div class="callout fourcol first">
+							<span class="callout-icon icon icon-planet"></span>
+							<div class="callout-container">
+								<h3>What You Need</h3>
+								<div class="callout-divider"></div>
+								<div class="callout-content">junk n stuff</div>
+							</div>
+						</div>
+
+						<div class="callout fourcol">
+							<span class="callout-icon icon icon-launch"></span>
+							<div class="callout-container">
+								<h3>Let's Be Great Together!</h3>
+								junk n stuff
+							</div>
+						</div>
+						<div class="callout fourcol last">
+							<span class="callout-icon icon icon-rocket"></span>
+							<div class="callout-container">
+								<h3>Who We Are</h3>
+								junk n stuff
+							</div>
+						</div>
+					</div>
+
+				    <div id="main" class="eightcol clearfix" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					

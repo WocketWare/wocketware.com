@@ -696,6 +696,28 @@ BUTTONS
   background-image: linear-gradient(to bottom, #1681c4, #1990db);
 }
 /******************************************************************
+Site Name: WocketWare
+Author: Todd H Gardner
+
+Stylesheet: Common Icons & Sprites
+
+******************************************************************/
+.icon {
+  display: block;
+  width: 150px;
+  height: 127px;
+  background-image: url('../images/icons-150.png');
+}
+.icon-planet {
+  background-position: 0 0;
+}
+.icon-launch {
+  background-position: -150px 0;
+}
+.icon-rocket {
+  background-position: -300px 0;
+}
+/******************************************************************
 BASE (MOBILE) SIZE 
 This is the average viewing window. So Desktops, Laptops, and 
 in general anyone not viewing on a mobile device. Here's where
@@ -1518,10 +1540,13 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
-  #logo {
+  .header {
+    margin-bottom: -100px;
+  }
+  .header #logo {
     text-align: center;
   }
-  #logo a {
+  .header #logo a {
     position: relative;
     z-index: 5;
   }
@@ -1624,6 +1649,43 @@ you can add resource intensive styles.
     display: block;
   }
   /* end .nav */
+  #content {
+    position: relative;
+    top: -50px;
+  }
+  /*********************
+  HOMEPAGE SLIDER
+  *********************/
+  #slider {
+    height: 369px;
+    background-color: pink;
+  }
+  /*********************
+  CALLOUTS
+  *********************/
+  #callouts .callout {
+    margin-top: 30px;
+  }
+  #callouts .callout-icon {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto 0;
+  }
+  #callouts .callout-container {
+    background: url('../images/callout.png') no-repeat;
+    height: 300px;
+    position: relative;
+    top: -60px;
+  }
+  #callouts .callout-container h3 {
+    color: #000000;
+    font-family: "FuturaLTBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    margin: 0 auto;
+    position: inherit;
+    text-align: center;
+    top: 40px;
+  }
   /*********************
   SIDEBARS & ASIDES
   *********************/

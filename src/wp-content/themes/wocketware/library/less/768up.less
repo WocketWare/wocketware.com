@@ -106,7 +106,9 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 
-.header {}
+.header {
+
+	margin-bottom: -100px;
 
 	#logo {
 		text-align: center;
@@ -116,7 +118,7 @@ HEADER SYTLES
 			z-index: 5;
 		}
 	}
-
+}
 
 /*********************
 NAVIGATION STYLES
@@ -240,6 +242,54 @@ NAVIGATION STYLES
 	
 } /* end .nav */
 	
+#content {
+	position: relative;
+	top: -50px;
+}
+
+/*********************
+HOMEPAGE SLIDER
+*********************/
+#slider {
+	height: 369px;
+	background-color: pink;
+}
+
+/*********************
+CALLOUTS
+*********************/
+#callouts {
+
+	.callout {
+		margin-top: 30px;
+	}
+
+	.callout-icon {
+		position: relative;
+		z-index: 10;
+		margin: 0 auto 0;
+	}
+
+	.callout-container {
+		background: url('../images/callout.png') no-repeat;
+		height:300px;
+		position: relative;
+		top: -60px;
+
+		h3 {
+			color: @black;
+			font-family: @futura-book;
+		    font-size: 2em;
+		    margin: 0 auto;
+		    position: inherit;
+		    text-align: center;
+    		top: 40px;
+
+		}
+	}
+}
+
+
 /*********************
 SIDEBARS & ASIDES
 *********************/
