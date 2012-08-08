@@ -717,6 +717,12 @@ Stylesheet: Common Icons & Sprites
 .icon-rocket {
   background-position: -300px 0;
 }
+.divider {
+  display: block;
+  width: 200px;
+  height: 6px;
+  background-image: url('../images/divider.png');
+}
 /******************************************************************
 BASE (MOBILE) SIZE 
 This is the average viewing window. So Desktops, Laptops, and 
@@ -740,7 +746,6 @@ and will be used across all viewports.
 GENERAL STYLES
 *********************/
 body {
-  background: url('../images/background.png') repeat;
   font-family: Georgia, serif;
   font-size: 14px;
   line-height: 1.5;
@@ -894,11 +899,6 @@ h5,
 /*********************
 HEADER SYTLES
 *********************/
-#top-border {
-  background: url('../images/topborder.png') repeat-x;
-  width: 100%;
-  height: 30px;
-}
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -1417,6 +1417,9 @@ you can add resource intensive styles.
   /*********************
   GENERAL STYLES
   *********************/
+  body {
+    background: url('../images/background.png') repeat;
+  }
   /********************
   WORDPRESS BODY CLASSES
   style a page via class
@@ -1540,13 +1543,14 @@ you can add resource intensive styles.
   /*********************
   HEADER SYTLES
   *********************/
-  .header {
-    margin-bottom: -100px;
+  #top-border {
+    background: url('../images/topborder.png') repeat-x;
+    width: 100%;
+    height: 30px;
   }
-  .header #logo {
-    text-align: center;
-  }
-  .header #logo a {
+  #logo a {
+    /* position the link higher than the nav that will be moved ontop of it. */
+  
     position: relative;
     z-index: 5;
   }
@@ -1555,10 +1559,12 @@ you can add resource intensive styles.
   *********************/
   .nav {
     border: 0;
-    /* bring the navigation up with the main logo */
+    /* position the nav aligned with the main logo */
   
     position: relative;
-    top: -110px;
+    top: -130px;
+    /* At this resolution, pad out the nav links so they do not overlay the logo */
+  
     /* end .menu ul li */
   
     /* highlight current page */
@@ -1567,13 +1573,17 @@ you can add resource intensive styles.
   
   }
   .nav ul.top-nav {
-    padding: 0 70px;
+    padding: 0;
+  }
+  .nav .first li {
+    float: right;
+    padding-right: 50px;
+  }
+  .nav .last li {
+    float: left;
+    padding-left: 50px;
   }
   .nav li {
-    float: left;
-    position: relative;
-    /* push the second half of the nav items to the right */
-  
     /*
   		plan your menus and drop-downs wisely.
   		*/
@@ -1584,7 +1594,6 @@ you can add resource intensive styles.
   .nav li a {
     width: 145px;
     height: 42px;
-    margin: 0 5px;
     padding: 7px 0 0 0;
     background: url('../images/navitem.png') no-repeat;
     border-bottom: 0;
@@ -1602,15 +1611,6 @@ you can add resource intensive styles.
   .nav li a:focus {
     background-color: #dedede;
     background: url('../images/navitemactive.png') no-repeat;
-  }
-  .nav li:first-child {
-    margin-left: 0;
-  }
-  .nav li:last-child {
-    margin-right: 0;
-  }
-  .nav li:nth-child(n+3) {
-    float: right;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
@@ -1649,9 +1649,9 @@ you can add resource intensive styles.
     display: block;
   }
   /* end .nav */
-  #content {
-    position: relative;
-    top: -50px;
+  /* Fix the relative positioning issues created by the nav. */
+  #post-nav {
+    margin-top: -140px;
   }
   /*********************
   HOMEPAGE SLIDER
@@ -1685,6 +1685,39 @@ you can add resource intensive styles.
     position: inherit;
     text-align: center;
     top: 40px;
+  }
+  #callouts .callout-container .divider {
+    position: inherit;
+    top: 40px;
+    margin: 0 auto 0;
+  }
+  #callouts .callout-container .content {
+    position: inherit;
+    top: 40px;
+    margin: 0 auto 0;
+    font-family: "FuturaLTBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 20px;
+    font-size: 1.4em;
+  }
+  #callouts .callout-container::after {
+    background-color: blue;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    top: 40px;
+    width: 50%;
+    content: ' ';
+  }
+  #callouts .callout-container::after {
+    background-color: red;
+    display: inline-block;
+    height: 40px;
+    position: relative;
+    top: 40px;
+    width: 50%;
+    content: ' ';
+    margin: 0 0 0 auto;
+    float: right;
   }
   /*********************
   SIDEBARS & ASIDES
@@ -1757,6 +1790,21 @@ you can add resource intensive styles.
   be seen on the Desktop. 
   
   ******************************************************************/
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  nav {
+    /* At larger resolutions, the navigation menu will appear
+     on a single line spaced around the logo. */
+  
+  }
+  nav li {
+    padding: 0 !important;
+  }
+  /* Fix the relative positioning issues created by the nav. */
+  #post-nav {
+    margin-top: -91px !important;
+  }
 }
 /* end of media query */
 /******************************************************************

@@ -17,7 +17,9 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-body {}
+body {
+	background: url('../images/background.png') repeat;
+}
 
 /********************
 WORDPRESS BODY CLASSES
@@ -106,19 +108,21 @@ LAYOUT & GRID STYLES
 HEADER SYTLES
 *********************/
 
-.header {
+#top-border {
+	background: url('../images/topborder.png') repeat-x;
+	width: 100%;
+	height: 30px;
+}
 
-	margin-bottom: -100px;
+.header {}
 
 	#logo {
-		text-align: center;
-
 		a {
-			position: relative;
-			z-index: 5;
+			/* position the link higher than the nav that will be moved ontop of it. */
+			position:relative;
+			z-index:5;
 		}
 	}
-}
 
 /*********************
 NAVIGATION STYLES
@@ -126,31 +130,35 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
+	ul.top-nav { padding: 0 }
 			
-	ul.top-nav { padding: 0 70px; }
-			
-	/* bring the navigation up with the main logo */
+	/* position the nav aligned with the main logo */
 	position: relative;
-	top: -110px;
+	top: -130px;
+
+	/* At this resolution, pad out the nav links so they do not overlay the logo */
+	.first li {
+		float:right;
+		padding-right:50px;
+	}
+	.last li {
+		float:left;
+		padding-left:50px;
+	}
 
 	li {
-		float: left;
-		position: relative;
-				
 		a {
 			width: 145px;
 			height: 42px;
-			margin: 0 5px;
 			padding: 7px 0 0 0;
 			background: url('../images/navitem.png') no-repeat;
 			border-bottom: 0;
 			text-align: center;
-			
+
 			text-shadow: 0 1px 2px @shadow-grey;
 
 			font-family: @futura-book;
 			font-size: 1.4em;
-					
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
@@ -159,18 +167,6 @@ NAVIGATION STYLES
 				background-color: #dedede;
 				background: url('../images/navitemactive.png') no-repeat;
 			}
-		}
-				
-		&:first-child {
-			margin-left:0;
-		}
-		&:last-child {
-			margin-right:0;
-		}
-
-		/* push the second half of the nav items to the right */
-		&:nth-child(n+3) {
-			float: right;
 		}
 
 		/*
@@ -241,10 +237,12 @@ NAVIGATION STYLES
 	}  /* end current highlighters */
 	
 } /* end .nav */
-	
+
+/* Fix the relative positioning issues created by the nav. */
+#post-nav { margin-top:-140px; }
+
 #content {
-	position: relative;
-	top: -50px;
+
 }
 
 /*********************
@@ -284,9 +282,46 @@ CALLOUTS
 		    position: inherit;
 		    text-align: center;
     		top: 40px;
+		}
+
+		.divider {
+			position: inherit;
+			top: 40px;
+			margin: 0 auto 0;
+		}
+
+		.content {
+			position: inherit;
+			top: 40px;
+			margin: 0 auto 0;	
+			font-family: @futura-book;
+			padding: 10px 20px;
+			font-size: 1.4em;
+
 
 		}
+
 	}
+		.callout-container::after {
+			background-color:blue;
+			display:inline-block;
+			height:40px;
+			position:relative;
+			top:40px;
+			width:50%;
+			content: ' ';
+		}
+		.callout-container::after {
+			background-color:red;
+			display:inline-block;
+			height:40px;
+			position:relative;
+			top:40px;
+			width:50%;
+			content: ' ';
+			margin: 0 0 0 auto;
+			float:right;
+		}
 }
 
 

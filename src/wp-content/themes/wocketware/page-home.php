@@ -21,23 +21,26 @@ Template Name: Home Template
 							<span class="callout-icon icon icon-planet"></span>
 							<div class="callout-container">
 								<h3>What You Need</h3>
-								<div class="callout-divider"></div>
-								<div class="callout-content">junk n stuff</div>
+								<div class="divider"></div>
+								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
 							</div>
+							<div id="x"></div><div id="y"></div>
 						</div>
 
 						<div class="callout fourcol">
 							<span class="callout-icon icon icon-launch"></span>
 							<div class="callout-container">
 								<h3>Let's Be Great Together!</h3>
-								junk n stuff
+								<div class="divider"></div>
+								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
 							</div>
 						</div>
 						<div class="callout fourcol last">
 							<span class="callout-icon icon icon-rocket"></span>
 							<div class="callout-container">
 								<h3>Who We Are</h3>
-								junk n stuff
+								<div class="divider"></div>
+								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
 							</div>
 						</div>
 					</div>
