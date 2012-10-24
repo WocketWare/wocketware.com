@@ -9,6 +9,8 @@ wp-config.php
 *.sublime-project
 *.sublime-workspace
 
+src/wp-content/themes/wocketware/library/css/*.css
+
 #################
 ## Eclipse
 #################
