@@ -12,10 +12,6 @@ node_modules
 # WordPress Configuration
 wp-config.php
 
-
-
-**/library/css/*.css
-
 #################
 ## Eclipse
 #################
