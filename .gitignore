@@ -14,7 +14,7 @@ wp-config.php
 
 
 
-src/wp-content/themes/wocketware/library/css/*.css
+**/library/css/*.css
 
 #################
 ## Eclipse

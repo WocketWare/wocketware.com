@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       }
     },
     lint: {
-      all: ['grunt.js', libraryPath + 'js/!(vendor)/**/*.js']
+      all: ['grunt.js', libraryPath + 'js/!(libs)/**/*.js']
     },
     jshint: {
       options: {
