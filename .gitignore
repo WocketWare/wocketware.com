@@ -2,12 +2,17 @@
 ## MY STUFF
 #################
 
-# Never want to check in a WordPress config file
-wp-config.php
-
-# Sublime Text project files
+# Sublime project files
 *.sublime-project
 *.sublime-workspace
+
+# Node build modules
+node_modules
+
+# WordPress Configuration
+wp-config.php
+
+
 
 src/wp-content/themes/wocketware/library/css/*.css
 
