@@ -45,29 +45,6 @@
 
 				<div id="inner-header" class="wrap clearfix">
 
-					<h1 id="logo" class="text-center">
-						<a href="<?php echo home_url(); ?>" rel="nofollow">
-							<img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/library/images/wocketware.png" />
-						</a>
-					</h1>
-
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-					<nav role="navigation" class="nav">
-						<ul id="menu-main" class="top-nav clearfix">
-							<div class="fourcol first">
-								<li class="menu-item"><a href="http://s">Services</a></li>
-							<li class="menu-item"><a href="http://p">Portfolio</a></li>
-							
-							</div>
-							<div class="fourcol last">
-								<li class="menu-item"><a href="http://b">Blog</a></li>
-								<li class="menu-item"><a href="http://c">Contact</a></li>
-							</div>
-						</ul>
-						<?php //bones_main_nav();?>
-					</nav>
 					<div id="post-nav" class="clearfix"></div>
 
 				</div>

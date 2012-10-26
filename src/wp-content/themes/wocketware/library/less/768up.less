@@ -116,56 +116,22 @@ HEADER SYTLES
 
 .header {}
 
-	#logo {
-		a {
-			/* position the link higher than the nav that will be moved ontop of it. */
-			position:relative;
-			z-index:5;
-		}
-	}
+	#logo {}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
 .nav {
-	border: 0;
-	ul.top-nav { padding: 0 }
-			
-	/* position the nav aligned with the main logo */
-	position: relative;
-	top: -130px;
-
-	/* At this resolution, pad out the nav links so they do not overlay the logo */
-	.first li {
-		float:right;
-		padding-right:50px;
-	}
-	.last li {
-		float:left;
-		padding-left:50px;
-	}
 
 	li {
 		a {
-			width: 145px;
-			height: 42px;
-			padding: 7px 0 0 0;
-			background: url('../images/navitem.png') no-repeat;
-			border-bottom: 0;
-			text-align: center;
-
-			text-shadow: 0 1px 2px @shadow-grey;
-
-			font-family: @futura-book;
-			font-size: 1.4em;
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				background-color: #dedede;
-				background: url('../images/navitemactive.png') no-repeat;
+
 			}
 		}
 
@@ -243,85 +209,6 @@ NAVIGATION STYLES
 
 #content {
 
-}
-
-/*********************
-HOMEPAGE SLIDER
-*********************/
-#slider {
-	height: 369px;
-	background-color: pink;
-}
-
-/*********************
-CALLOUTS
-*********************/
-#callouts {
-
-	.callout {
-		margin-top: 30px;
-	}
-
-	.callout-icon {
-		position: relative;
-		z-index: 10;
-		margin: 0 auto 0;
-	}
-
-	.callout-container {
-		background: url('../images/callout.png') no-repeat;
-		height:300px;
-		position: relative;
-		top: -60px;
-
-		h3 {
-			color: @black;
-			font-family: @futura-book;
-		    font-size: 2em;
-		    margin: 0 auto;
-		    position: inherit;
-		    text-align: center;
-    		top: 40px;
-		}
-
-		.divider {
-			position: inherit;
-			top: 40px;
-			margin: 0 auto 0;
-		}
-
-		.content {
-			position: inherit;
-			top: 40px;
-			margin: 0 auto 0;	
-			font-family: @futura-book;
-			padding: 10px 20px;
-			font-size: 1.4em;
-
-
-		}
-
-	}
-		.callout-container::after {
-			background-color:blue;
-			display:inline-block;
-			height:40px;
-			position:relative;
-			top:40px;
-			width:50%;
-			content: ' ';
-		}
-		.callout-container::after {
-			background-color:red;
-			display:inline-block;
-			height:40px;
-			position:relative;
-			top:40px;
-			width:50%;
-			content: ' ';
-			margin: 0 0 0 auto;
-			float:right;
-		}
 }
 
 

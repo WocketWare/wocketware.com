@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Home Template
+Template Name: Home
 */
 ?>
 
@@ -9,86 +9,15 @@ Template Name: Home Template
 			<div id="content">
 			
 				<div id="inner-content" class="wrap clearfix">
+
+				    <div id="main" class="twelvecol clearfix" role="main">
 			
-					<div id="slider" class="twelvecol first clearfix">
+						<h1 id="hero" class="text-center">
+							<a href="<?php echo home_url(); ?>" rel="nofollow">
+								<img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/library/images/wocketware.png" />
+							</a>
+						</h1>
 
-
-					</div>
-
-
-					<div id="callouts" class="clearfix">
-						<div class="callout fourcol first">
-							<span class="callout-icon icon icon-planet"></span>
-							<div class="callout-container">
-								<h3>What You Need</h3>
-								<div class="divider"></div>
-								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
-							</div>
-							<div id="x"></div><div id="y"></div>
-						</div>
-
-						<div class="callout fourcol">
-							<span class="callout-icon icon icon-launch"></span>
-							<div class="callout-container">
-								<h3>Let's Be Great Together!</h3>
-								<div class="divider"></div>
-								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
-							</div>
-						</div>
-						<div class="callout fourcol last">
-							<span class="callout-icon icon icon-rocket"></span>
-							<div class="callout-container">
-								<h3>Who We Are</h3>
-								<div class="divider"></div>
-								<div class="content">Lorem ipsum dolor sit amet, ad alii copiosae ius, ferri civibus interpretaris ne mel, justo graece primis an quo.</div>
-							</div>
-						</div>
-					</div>
-
-				    <div id="main" class="eightcol clearfix" role="main">
-
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						
-						    <header class="article-header">
-							
-							    <h1 class="page-title"><?php the_title(); ?></h1>
-							
-							    <p class="meta"><?php _e("Posted", "bonestheme"); ?> <time datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "bonestheme"); ?> <?php the_author_posts_link(); ?>.</p>
-						
-						    </header> <!-- end article header -->
-					
-						    <section class="post-content">
-							    <?php the_content(); ?>
-						    </section> <!-- end article section -->
-						
-						    <footer class="article-footer">
-			
-							    <p class="clearfix"><?php the_tags('<span class="tags">Tags: ', ', ', '</span>'); ?></p>
-							
-						    </footer> <!-- end article footer -->
-					
-					    </article> <!-- end article -->
-					
-					    <?php endwhile; ?>	
-					
-					    <?php else : ?>
-					
-        					<article id="post-not-found" class="hentry clearfix">
-        					    <header class="article-header">
-        						    <h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-        						</header>
-        					    <section class="post-content">
-        						    <p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-        						</section>
-        						<footer class="article-footer">
-        						    <p><?php _e("This is the error message in the page-custom.php template.", "bonestheme"); ?></p>
-        						</footer>
-        					</article>
-					
-					    <?php endif; ?>
-			
 				    </div> <!-- end #main -->
 				    
 				</div> <!-- end #inner-content -->
