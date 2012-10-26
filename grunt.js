@@ -1,28 +1,33 @@
 module.exports = function(grunt) {
 
-  // configuration properties
+  // Public tasks
+  grunt.registerTask('default', 'less:development');
+  //grunt.registerTask('watch');
+
+
+  // Project Configuration
   var themePath   = 'src/wp-content/themes/wocketware/';
   var libraryPath = themePath + 'library/';
   var cssPath     = libraryPath + 'css/';
   var lessPath    = libraryPath + 'less/';
 
 
-  // Project configuration.
+  // Dependencies
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+
   grunt.initConfig({
+    
+    // watch for changes in matching files and execute tasks
     watch: {
       less: {
         files: [ lessPath + '**/*.less' ],
-        tasks: ['less:development']
+        tasks: ['less:development', 'reload']
       }
     },
-    lint: {
-      all: ['grunt.js', libraryPath + 'js/!(libs)/**/*.js']
-    },
-    jshint: {
-      options: {
-        browser: true
-      }
-    },
+
+    // compile less into css    
     less: {
       development: {
         options: {
@@ -36,26 +41,7 @@ module.exports = function(grunt) {
           files[cssPath + 'style.css']  = lessPath + 'style.less';
           return files;
         })()
-      },
-      production: {
-        options: {
-          paths: ["assets/css"],
-          yuicompress: true
-        },
-        files: {
-          "path/to/result.css": "path/to/source.less"
-        }
       }
     }
   });
-
-  // Load tasks from "grunt-sample" grunt plugin installed via Npm.
-  // grunt.loadNpmTasks('grunt-sample');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
-
-  // Default task.
-  grunt.registerTask('default', 'lint less:development');
-
 };
