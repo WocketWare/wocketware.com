@@ -20,7 +20,7 @@ Template Name: Home
 
 				    </div> <!-- end #main -->
 				    
-				</div> <!-- end #inner-content -->
+				</div> <!-- end 	#inner-content -->
     
 			</div> <!-- end #content -->
 
@@ -40,10 +40,40 @@ Template Name: Home
 					</div>
 
 					<div class="fourcol">
-						<h3>Contact</h3>
+						
+						<?php if( $_POST['w-contact-name'] ) { ?>
+
+							<h3><?php echo wocket_send_contact_email( $_POST['w-contact-name'], $_POST['w-contact-email'], $_POST['w-contact-message'] ); ?></h3>
+
+						<?php } else { ?>
+						
+							<h3>Contact</h3>
+							<form id="w-contact-form" name="w-contact" method="post" action="#">
+						   		<label for="w-contact-name-input">
+									<div class="acc-label">Name</div>
+									<input id="w-contact-name-input" name="w-contact-name" placeholder="Your Name" required="required" />
+						   		</label>
+							   		
+						   		<label for="w-contact-email-input">
+									<div class="acc-label">E-Mail</div>
+									<input id="w-contact-email-input" name="w-contact-email" type="email" placeholder="Your Email" required="required" />
+						   		</label>
+
+						   		<label for="w-contact-message-textarea">
+									<div class="acc-label">Message</div>
+									<textarea id="w-contact-message-textarea" name="w-contact-message" rows="3" placeholder="A Message for Us" required="required"></textarea>
+						   		</label>
+
+						   		<label for="w-contact-submit-button">
+						   			<div class="acc-label">Send</div>
+						   			<button type="submit">Send</button>
+						   		</label>
+							</form>
+
+						<?php } ?>
+
 					</div>
 
-					<div class="twocol last">&nbsp;</div>
 				</div>
                 
                 <div class="twelvecol first">

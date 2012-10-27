@@ -16,6 +16,33 @@ and tools. I put it up here so it's
 right up top and clean.
 *********************/
 
+function wocket_send_contact_email( $name, $email, $message ) {
+	$name_content = stripslashes( $name );
+	$email_content = stripslashes( $email );
+	$message_content = stripslashes( $message );
+
+	if ( !$name_content || !$email_content || !$message_content ) {
+		return "Please complete all fields";
+	}
+
+	if ( !is_email( $email ) ) {
+		return "Please enter a valid email address";
+	}
+
+	$to = "todd3091@gmail.com";
+	$subject = "Wocketware message from $name_content";
+	$headers =	"From: $name_content <$email_content>\n" .
+				"Reply-To: $email_content\n" .
+				"Content-Type: text/plain; charset=\"" . get_option('blog_charset') . "\"\n";
+	$emailMessage = "Message from $name_content:\n\n\n$message_content";
+
+	if( wp_mail( $to, $subject, $emailMessage, $headers ) ) {
+		return "Thanks! We'll be in touch with you shortly.";
+	} else {
+		return "Oops! Something went wrong.";
+	}
+}
+
 // we're firing all out initial functions at the start
 add_action('after_setup_theme','bones_ahoy', 15);
 
