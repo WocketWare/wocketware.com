@@ -37,9 +37,9 @@
 
 	<body <?php body_class(); ?>>
 
-		<div id="top-border">&nbsp;</div>
-
 		<div id="container">
+
+			<div id="top-border">&nbsp;</div>
 
 			<header class="header" role="banner">
 

@@ -17,9 +17,13 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
+html, body { height: 100%; }
+
 body {
 	background: url('../images/background.png') repeat;
 }
+
+#container { min-height: 100%; }
 
 /********************
 WORDPRESS BODY CLASSES
@@ -226,14 +230,6 @@ NAVIGATION STYLES
 	
 } /* end .nav */
 
-/* Fix the relative positioning issues created by the nav. */
-#post-nav { margin-top:-140px; }
-
-#content {
-
-}
-
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -360,6 +356,22 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+
+/* NOTE Footer is outside the container in this case so that it can be sticky
+	to the bottom of the document for content shorter than browsers window.
+	http://www.cssstickyfooter.com/ */
+#content {
+	padding-bottom: 354px; /* must be same height as the footer */
+	overflow:auto;
+}  
+
+footer {
+	background: url('../images/footer.png') repeat-x;
+	margin-top: -354px; /* negative value of footer height */
+	height: 339px;
+	padding-top: 15px;
+	position: relative;
+} 
 
 /*
 you'll probably need to do quite a bit
