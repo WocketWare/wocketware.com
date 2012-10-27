@@ -24,4 +24,35 @@ Template Name: Home
     
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+			<footer class="footer" role="contentinfo">
+			
+				<div id="inner-footer" class="wrap-narrow clearfix">
+					
+					<div>
+
+						<div class="fourcol first">
+							<h3>About</h3>
+						</div>
+
+						<div class="fourcol last">
+							<h3>Contact</h3>
+						</div>
+
+						
+					</div>
+	                
+	                <div class="twelvecol first">
+	                	<p class="attribution">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+	                </div>
+				
+				</div> <!-- end #inner-footer -->
+				
+			</footer> <!-- end footer -->
+		
+		</div> <!-- end #container -->
+		
+		<?php wp_footer(); // js scripts are inserted using this function ?>
+
+	</body>
+
+</html> <!-- end page. what a ride! -->
