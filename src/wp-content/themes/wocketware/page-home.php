@@ -76,8 +76,8 @@ Template Name: Home
 
 				</div>
                 
-                <div class="twelvecol first">
-                	<p class="attribution">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+                <div class="eightcol first">
+                	<p class="attribution">COPYRIGHT &copy; <?php echo date('Y'); ?> WOCKETWARE LLC. ALL RIGHTS RESERVED.</p>
                 </div>
 			
 			</div> <!-- end #inner-footer -->
