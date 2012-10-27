@@ -37,9 +37,14 @@ Template Name: Home
 
 					<div class="fourcol first">
 						<h3>About</h3>
+						<div id="w-about">
+							<p>Wocketware builds tailored software that delights our clients and their customers. We can provide turnkey software projects, or embed with your team and coach. We focus on collaboration and quality to build solid software that solves the right problems.</p> 
+
+						</div>
 					</div>
 
-					<div class="fourcol">
+
+					<div class="fourcol last">
 						
 						<?php if( $_POST['w-contact-name'] ) { ?>
 
