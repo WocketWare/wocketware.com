@@ -94,6 +94,10 @@ Template Name: Home
 
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
+		<script type="text/javascript">
+			var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-35850950-1"]),_gaq.push(["_setDomainName","wocketware.com"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}()
+		</script>
+
 	</body>
 
 </html> <!-- end page. what a ride! -->
