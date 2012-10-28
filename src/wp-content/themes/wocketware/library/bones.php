@@ -16,6 +16,10 @@ and tools. I put it up here so it's
 right up top and clean.
 *********************/
 
+function get_images_dir () {
+	return get_template_directory_uri() . "/library/images";
+}
+
 function wocket_send_contact_email( $name, $email, $message ) {
 	$name_content = stripslashes( $name );
 	$email_content = stripslashes( $email );

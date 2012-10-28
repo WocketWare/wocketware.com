@@ -21,6 +21,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
+		<!-- for third-generation iPad with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" 
+			  href="<?php echo get_images_dir() . "/apple-touch-icon-144x144-precomposed.png" ?>">
+
+		<!-- for iPhone with high-resolution Retina display: -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" 
+			  href="<?php echo get_images_dir() . "apple-touch-icon-114x114-precomposed.png" ?>">
+
+		<!-- for first- and second-generation iPad: -->
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" 
+			  href="<?php echo get_images_dir() . "apple-touch-icon-72x72-precomposed.png" ?>">
+
+		<!-- for non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+		<link rel="apple-touch-icon-precomposed" 
+			  href="<?php echo get_images_dir() . "apple-touch-icon-precomposed.png" ?>">
+
+		<!-- for everyone else -->
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -28,10 +45,6 @@
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
-
-		<!-- drop Google Analytics Here -->
-		<!-- TODO Add Google Analytics -->
-		<!-- end analytics -->
 
 	</head>
 
