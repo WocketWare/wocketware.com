@@ -11,6 +11,7 @@ node_modules
 
 # WordPress Configuration
 wp-config.php
+config/*
 
 #################
 ## Eclipse
