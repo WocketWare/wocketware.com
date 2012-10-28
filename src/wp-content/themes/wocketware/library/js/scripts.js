@@ -49,6 +49,22 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
+    (function ($, w) {
+        var $w = $(w);
+        $w.resize(function()    {
+            if(this.resizing) clearTimeout(this.resizeTO);
+            this.resizing = setTimeout(function() {
+                $(this).trigger('resized');
+            }, 500);
+        });
+        $w.on('resized', function () {
+            $('img[data-large]').attr('src', function (index, attr) {
+                var $this = $(this);
+                return ($w.width() < 768) ? $this.attr('data-small') : $this.attr('data-large');
+            });
+        });
+        $w.trigger('resized');
+    })(jQuery, window);
 	
  
 }); /* end of as page load scripts */

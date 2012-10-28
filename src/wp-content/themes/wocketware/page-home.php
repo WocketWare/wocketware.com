@@ -14,7 +14,10 @@ Template Name: Home
 			
 						<h1 id="hero" class="text-center">
 							<a href="<?php echo home_url(); ?>" rel="nofollow">
-								<img alt="<?php bloginfo('name'); ?>" src="<?php echo get_template_directory_uri(); ?>/library/images/wocketware_large.png" />
+								<img alt="<?php bloginfo('name'); ?>" 
+									 src="<?php echo get_images_dir(); ?>/wocketware_small.png"
+									 data-large="<?php echo get_images_dir(); ?>/wocketware_large.png"
+									 data-small="<?php echo get_images_dir(); ?>/wocketware_small.png" />
 							</a>
 						</h1>
 
