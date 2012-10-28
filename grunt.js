@@ -41,6 +41,19 @@ module.exports = function(grunt) {
           files[cssPath + 'style.css']  = lessPath + 'style.less';
           return files;
         })()
+      },
+      production: {
+        options: {
+          paths: [libraryPath + 'less'],
+          yuicompress: true
+        },
+        files: (function () {
+          var files = {};
+          files[cssPath + 'ie.css']     = lessPath + 'ie.less';
+          files[cssPath + 'login.css']  = lessPath + 'login.less';
+          files[cssPath + 'style.css']  = lessPath + 'style.less';
+          return files;
+        })()
       }
     }
   });
