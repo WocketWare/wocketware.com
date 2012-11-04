@@ -49,6 +49,8 @@ jQuery(document).ready(function($) {
     
 	
 	// add all your scripts here
+
+    // Responsive resizing of images
     (function ($, w) {
         var $w = $(w);
         $w.resize(function()    {
@@ -65,6 +67,34 @@ jQuery(document).ready(function($) {
         });
         $w.trigger('resized');
     })(jQuery, window);
+
+    // Add input placeholder for unsupported browsers
+    (function (Modernizr, $, w) {
+        if (!Modernizr.input.placeholder) {
+            $('[placeholder]').focus(function() {
+                var input = $(this);
+                if (input.val() === input.attr('placeholder')) {
+                    input.val('');
+                    input.removeClass('placeholder');
+                }
+            }).blur(function() {
+                var input = $(this);
+                if (input.val() === '' || input.val() === input.attr('placeholder')) {
+                    input.addClass('placeholder');
+                    input.val(input.attr('placeholder'));
+                }
+            }).blur();
+
+            $('[placeholder]').parents('form').submit(function() {
+                $(this).find('[placeholder]').each(function() {
+                    var input = $(this);
+                    if (input.val() === input.attr('placeholder')) {
+                        input.val('');
+                    }
+                });
+            });
+        }
+    })(Modernizr, jQuery, window);
 	
  
 }); /* end of as page load scripts */
